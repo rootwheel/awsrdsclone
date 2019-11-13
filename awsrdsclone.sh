@@ -15,7 +15,7 @@ function dbprobe ()
                 }
 function clusterClone ()
                 {
-                aws rds restore-db-cluster-to-point-in-time --source-db-cluster-identifier $PRODCLUSTER --db-cluster-identifier $DEVCLUSTER --restore-type copy-on-write --use-latest-restorable-time --db-subnet-group-name default-$
+                aws rds restore-db-cluster-to-point-in-time --source-db-cluster-identifier $PRODCLUSTER --db-cluster-identifier $DEVCLUSTER --restore-type copy-on-write --use-latest-restorable-time --db-subnet-group-name default-vpc-eff7b486 2>>$LOGFILE
                 log Cluster cloning >> $LOGFILE
                 }
 function dbCreate ()
