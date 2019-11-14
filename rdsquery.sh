@@ -9,7 +9,7 @@ do
                 aws rds describe-db-clusters --query 'DBClusters[*].{Cluster_ID:DBClusterIdentifier,Endpoint:Endpoint,Status:Status}'  --output table
             ;;
 	"Describe instances")
-                aws rds describe-db-instances --query 'DBInstances[*].{Cluster_ID:DBClusterIdentifier,Class:DBInstanceClass,Instance_ID:DBInstanceIdentifier,Status:DBInstanceStatus,Creation_time:InstanceCreateTime,Address:Endpoint.Addr$
+                aws rds describe-db-instances --query 'DBInstances[*].{Cluster_ID:DBClusterIdentifier,Class:DBInstanceClass,Instance_ID:DBInstanceIdentifier,Status:DBInstanceStatus,Creation_time:InstanceCreateTime,Address:Endpoint.Addr}' --output table
             ;;
 	"Quit")
             break
